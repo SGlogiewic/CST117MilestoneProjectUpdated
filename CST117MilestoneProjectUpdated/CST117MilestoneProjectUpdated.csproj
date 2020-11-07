@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23A03E04-0110-43FC-8EB7-D539F114752C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CST117MilestoneProjectUpdated</RootNamespace>
+    <AssemblyName>CST117MilestoneProjectUpdated</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddItemUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemUI.Designer.cs">
+      <DependentUpon>AddItemUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayInventoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayInventoryUI.Designer.cs">
+      <DependentUpon>DisplayInventoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs" />
+    <Compile Include="InventoryManager.cs" />
+    <Compile Include="InventoryUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryUI.Designer.cs">
+      <DependentUpon>InventoryUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NameSearchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameSearchUI.Designer.cs">
+      <DependentUpon>NameSearchUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriceSearchUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PriceSearchUI.Designer.cs">
+      <DependentUpon>PriceSearchUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveItemUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveItemUI.Designer.cs">
+      <DependentUpon>RemoveItemUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestockItemUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestockItemUI.Designer.cs">
+      <DependentUpon>RestockItemUI.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddItemUI.resx">
+      <DependentUpon>AddItemUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayInventoryUI.resx">
+      <DependentUpon>DisplayInventoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryUI.resx">
+      <DependentUpon>InventoryUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameSearchUI.resx">
+      <DependentUpon>NameSearchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PriceSearchUI.resx">
+      <DependentUpon>PriceSearchUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RemoveItemUI.resx">
+      <DependentUpon>RemoveItemUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestockItemUI.resx">
+      <DependentUpon>RestockItemUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
